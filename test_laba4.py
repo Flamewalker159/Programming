@@ -6,7 +6,6 @@ from unittest.mock import patch
 import laba4
 from laba4 import main, process_matrix, print_matrix
 
-
 class TestProcessMatrix(unittest.TestCase):
     def process_without_messages(self, matrix):
         with redirect_stdout(StringIO()):
@@ -48,7 +47,7 @@ class TestProcessMatrix(unittest.TestCase):
 
 
 class TestProgramInput(unittest.TestCase):
-    """Проверка main(): режимы ввода, сообщения и обработка ошибочных данных."""
+    # проверка main
 
     def run_program(self, answers):
         output = StringIO()

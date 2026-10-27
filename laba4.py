@@ -1,6 +1,5 @@
 ﻿import random
 
-
 def process_matrix(matrix):
     if not matrix or not matrix[0]:
         return matrix

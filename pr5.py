@@ -1,6 +1,5 @@
 ﻿import random
 
-# Генерируем множество из 6 случайных неповторяющихся чисел от 1 до 49
 sportloto = set()
 
 while len(sportloto) < 6:

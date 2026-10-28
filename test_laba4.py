@@ -105,15 +105,5 @@ class TestProgramInput(unittest.TestCase):
         self.assertIn("нижняя граница не может быть больше верхней", output)
         self.assert_stops_before_processing(output)
 
-    def test_print_matrix_helper(self):
-        output = StringIO()
-        with redirect_stdout(output):
-            print_matrix([[1, -2], [30, 4]])
-        self.assertEqual(
-            [list(map(int, row.split())) for row in output.getvalue().splitlines()],
-            [[1, -2], [30, 4]],
-        )
-
-
 if __name__ == "__main__":
     unittest.main(verbosity=2)

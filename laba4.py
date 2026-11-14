@@ -22,10 +22,9 @@ def process_matrix(matrix):
     if negative_cols_count < (n / 2):
         print(f"\nСтолбцов с отрицательными элементами: {negative_cols_count} из {n} (меньше половины).")
         print("Умножаем элементы нечетных столбцов  на 10.")
-        for j in range(n):
-            if (j + 1) % 2 != 0:
-                for i in range(m):
-                    matrix[i][j] *= 10
+        for j in range(0, n, 2):
+            for i in range(m):
+                matrix[i][j] *= 10
     else:
         print(f"\nСтолбцов с отрицательными элементами: {negative_cols_count} из {n} (не меньше половины).")
         print("Возводим все отрицательные элементы в квадрат.")
